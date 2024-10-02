@@ -18,6 +18,4 @@ The data (very raw) is kept inside the `data.json` file, as this is an experimen
 
 There is a collapsible sidebar with pages (not linked, as it was requested to work only on the main dashboard. I decided to implement the pages without creating them to give a preview of how the application would look if it were fully developed in every detail). The same goes for the search bar, which is currently not linked since the data is present in the JSON file and not in a relational database, where better results could be achieved.
 
-The demo is viewable at [social.trade-exe.tech](http://social.trade-exe.tech). Here is the link to the GitHub project: 
-
-Let me know if you need anything else!
+The demo is viewable at [social.trade-exe.tech](http://social.trade-exe.tech).
