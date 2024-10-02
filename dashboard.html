@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PremierAnalytics</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAdVBMVEVHcEwCk+gDo+gDo+gCl+gDp+cCmegDoegBjOgCnegDp+cBjOgDp+gBjOkBiugBjOgErOcDnOgBjOkCk+n///8BiekCmOkEq+gDp+gBj+gDoOgCkekFo+gDpeiPw/AAleb5/f4spuiz2fPq9fp0v+za6/lUt+po4/FFAAAAEXRSTlMANE/PDt17/uAns7rt9VjJkxROOiAAAAFFSURBVCiRZZPZkoQgDEVxFBu3qQJBxbXd+v8/cUiC23QefDl1UiE3MnZUEqc8z3kaJ+x//XLZtq92GIam4T8PFIWyko72PcC6DqOLBVXlmKOvg9Zn76A8oKPQuL5oVJblt1pTZ9GVd7X99APAEOfsOqITlJTLuH1QhZmFBVhW87JqvY/9ui5zA525e7uyqHajxpq3dd1mP1OsrH3AaZt7milmmSIK8L3tet8X6Z+TMqEUNrYArd2dfDyHs0KRSlBKB7eWaM4KQ6qH9q31KGlPORPGoKoQVhOYkhpzlhlULUJlFxjYrzhlsSEVoVvEvi6Tzy5miSGK0HTWrbD1AbhgBEJlsO09Ow6LJxWgNvfs8Fi8qtwX06lIDSlsUn0AZ2N/RoGHPjuiwXlE3+rJXOdjT169nybMLC5VPI+afodMFIXIbr/DH4g2NkTuzYLJAAAAAElFTkSuQmCC">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script>
+        function checkLogin() {
+            const cookies = document.cookie.split('; ');
+            const loggedInCookie = cookies.find(cookie => cookie.startsWith('loggedIn='));
+
+            if (!loggedInCookie) {
+                window.location.href = 'index.html';
+            }
+        }
+
+        window.onload = checkLogin;
+    </script>
+</head>
+<body>
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://static.wixstatic.com/media/95a2b6_ff1ba27bef5d48de810308126efb5cb0~mv2.png" alt="PremierAnalytics Logo">
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active"><a href="#">Overview</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <button id="logout-btn" class="logout-btn">Log Out</button>
+            <button id="toggleSidebar" class="toggle-btn">≡</button>
+        </div>
+    </aside>
+    <!-- Header Section -->
+    <main class="main-content">
+        <header class="dashboard-header">
+            <div class="header-top">
+                <div class="search-container">
+                    <input type="text" placeholder="Search here">
+                </div>
+                  
+                <div class="user-profile">
+                    <span>Trade Exe</span>
+                    <img src="/assets/user-avatar.png" alt="User Avatar" style="width: 30px;">
+                </div>
+            </div>
+            <hr>
+            <div class="welcome-message">
+                <h1>Welcome back, Trade</h1>
+                <p>Here’s what’s happening with your store today.</p>
+            </div>
+        </header>
+        
+        <!-- Social metrics Section -->
+        <section class="dashboard-metrics">
+            <div class="metric-box dark">
+                <p><i class="fab fa-instagram" style="color: #E1306C;"></i> Instagram Followers</p>
+                <h2></h2>
+                <span class="metric-detail"></span>
+            </div>
+            <div class="metric-box dark">
+                <p><i class="fab fa-tiktok" style="color: #000000;"></i> TikTok Followers</p>
+                <h2></h2>
+                <span class="metric-detail"></span>
+            </div>
+            <div class="metric-box dark">
+                <p><i class="fab fa-youtube" style="color: #FF0000;"></i> YouTube Views</p>
+                <h2></h2>
+                <span class="metric-detail"></span>
+            </div>
+            <div class="metric-box dark">
+                <p><i class="fas fa-comments" style="color: #3498DB;"></i> Last Interactions</p>
+                <h2></h2>
+                <span class="metric-detail"></span>
+            </div>
+        </section>
+        
+        <!-- Charts Section -->
+        <section class="dashboard-charts">
+            <div class="chart-container">
+                <canvas id="revenue-vs-orders"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="monthly-sales"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="sales-by-category"></canvas>
+            </div>
+        </section>
+
+        <section class="top-products">
+            <h3>Top Products</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Order ID</th>
+                        <th>Price</th>
+                        <th>Sales</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/script.js"></script>
+</body>
+</html>
+
+
+<script>
+const sidebar = document.querySelector('.sidebar');
+const toggleBtn = document.querySelector('.toggle-btn');
+const sidebarFooter = document.querySelector('.sidebar-footer');
+const sidebarHeader = document.querySelector('.sidebar-header');
+
+toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+
+    if (sidebar.classList.contains('collapsed')) {
+        sidebarHeader.appendChild(toggleBtn);
+    } else {
+        sidebarFooter.appendChild(toggleBtn);
+    }
+});
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const logoutBtn = document.getElementById('logout-btn');
+
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                window.location.href = 'index.html';
+            });
+        }
+    });
+</script>

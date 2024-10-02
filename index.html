@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PremierAnalytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAdVBMVEVHcEwCk+gDo+gDo+gCl+gDp+cCmegDoegBjOgCnegDp+cBjOgDp+gBjOkBiugBjOgErOcDnOgBjOkCk+n///8BiekCmOkEq+gDp+gBj+gDoOgCkekFo+gDpeiPw/AAleb5/f4spuiz2fPq9fp0v+za6/lUt+po4/FFAAAAEXRSTlMANE/PDt17/uAns7rt9VjJkxROOiAAAAFFSURBVCiRZZPZkoQgDEVxFBu3qQJBxbXd+v8/cUiC23QefDl1UiE3MnZUEqc8z3kaJ+x//XLZtq92GIam4T8PFIWyko72PcC6DqOLBVXlmKOvg9Zn76A8oKPQuL5oVJblt1pTZ9GVd7X99APAEOfsOqITlJTLuH1QhZmFBVhW87JqvY/9ui5zA525e7uyqHajxpq3dd1mP1OsrH3AaZt7milmmSIK8L3tet8X6Z+TMqEUNrYArd2dfDyHs0KRSlBKB7eWaM4KQ6qH9q31KGlPORPGoKoQVhOYkhpzlhlULUJlFxjYrzhlsSEVoVvEvi6Tzy5miSGK0HTWrbD1AbhgBEJlsO09Ow6LJxWgNvfs8Fi8qtwX06lIDSlsUn0AZ2N/RoGHPjuiwXlE3+rJXOdjT169nybMLC5VPI+afodMFIXIbr/DH4g2NkTuzYLJAAAAAElFTkSuQmCC">
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-image: url('assets/login-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+    }
+
+    .login-container {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #3498db;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 15px;
+        width: 80%;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s;
+    }
+
+    input:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+    button {
+        font-family: 'Poppins', sans-serif;
+        padding: 15px;
+        border: none;
+        background-color: #3498db;
+        color: white;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+    }
+
+    .error-message {
+        color: #e74c3c;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="/assets/script.js"></script>
+</body>
+</html>
