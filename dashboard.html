@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width" />
     <title>PremierAnalytics</title>
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAdVBMVEVHcEwCk+gDo+gDo+gCl+gDp+cCmegDoegBjOgCnegDp+cBjOgDp+gBjOkBiugBjOgErOcDnOgBjOkCk+n///8BiekCmOkEq+gDp+gBj+gDoOgCkekFo+gDpeiPw/AAleb5/f4spuiz2fPq9fp0v+za6/lUt+po4/FFAAAAEXRSTlMANE/PDt17/uAns7rt9VjJkxROOiAAAAFFSURBVCiRZZPZkoQgDEVxFBu3qQJBxbXd+v8/cUiC23QefDl1UiE3MnZUEqc8z3kaJ+x//XLZtq92GIam4T8PFIWyko72PcC6DqOLBVXlmKOvg9Zn76A8oKPQuL5oVJblt1pTZ9GVd7X99APAEOfsOqITlJTLuH1QhZmFBVhW87JqvY/9ui5zA525e7uyqHajxpq3dd1mP1OsrH3AaZt7milmmSIK8L3tet8X6Z+TMqEUNrYArd2dfDyHs0KRSlBKB7eWaM4KQ6qH9q31KGlPORPGoKoQVhOYkhpzlhlULUJlFxjYrzhlsSEVoVvEvi6Tzy5miSGK0HTWrbD1AbhgBEJlsO09Ow6LJxWgNvfs8Fi8qtwX06lIDSlsUn0AZ2N/RoGHPjuiwXlE3+rJXOdjT169nybMLC5VPI+afodMFIXIbr/DH4g2NkTuzYLJAAAAAElFTkSuQmCC">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -45,10 +45,12 @@
     <main class="main-content">
         <header class="dashboard-header">
             <div class="header-top">
+                <div class="sidebar-toggle-btn" id="mobile-sidebar-toggle">
+                    <button id="open-sidebar-btn">≡</button>
+                </div>
                 <div class="search-container">
                     <input type="text" placeholder="Search here">
                 </div>
-                  
                 <div class="user-profile">
                     <span>Trade Exe</span>
                     <img src="/assets/user-avatar.png" alt="User Avatar" style="width: 30px;">
@@ -59,7 +61,7 @@
                 <h1>Welcome back, Trade</h1>
                 <p>Here’s what’s happening with your store today.</p>
             </div>
-        </header>
+        </header>        
         
         <!-- Social metrics Section -->
         <section class="dashboard-metrics">
@@ -126,6 +128,17 @@ const sidebar = document.querySelector('.sidebar');
 const toggleBtn = document.querySelector('.toggle-btn');
 const sidebarFooter = document.querySelector('.sidebar-footer');
 const sidebarHeader = document.querySelector('.sidebar-header');
+const mobileSidebarToggle = document.querySelector('#open-sidebar-btn'); 
+
+mobileSidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+
+    if (sidebar.classList.contains('collapsed')) {
+        sidebarHeader.appendChild(toggleBtn);
+    } else {
+        sidebarFooter.appendChild(toggleBtn);
+    }
+});
 
 toggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
@@ -136,6 +149,7 @@ toggleBtn.addEventListener('click', () => {
         sidebarFooter.appendChild(toggleBtn);
     }
 });
+
 
 </script>
 
