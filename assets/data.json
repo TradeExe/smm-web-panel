@@ -2,7 +2,7 @@
     "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     "revenue": [50, 800, 100, 1500, 200, 1000, 50, 3000, 200, 5000, 100, 600],
     "orders": [10, 300, 20, 400, 50, 200, 10, 500, 3000, 700, 15, 100],
-    "categories": ["Social Media Advertising", "Content Creation", "Social Media Tools"],
+    "categories": ["Social Media Advertising", "Content Creation", "SEO Services"],
     "salesByCategory": [55, 25, 20],
     "monthlySales": [800, 1000, 600, 400, 900, 700, 800, 600, 900, 1000, 1100, 1200],
     "socialMetrics": {
@@ -17,22 +17,46 @@
     },
     "topProducts": [
         {
-            "name": "Social Media Management Software",
-            "orderID": "SMM-001",
-            "price": "$99",
-            "sales": 150
+            "name": "Social Media Advertising Toolkit",
+            "orderID": "SMAT-003",
+            "price": "$299",
+            "sales": 75,
+            "category": "Social Media Advertising"
+        },
+        {
+            "name": "Instagram Growth Service",
+            "orderID": "IGS-006",
+            "price": "$120",
+            "sales": 100,
+            "category": "Social Media Advertising"
         },
         {
             "name": "Content Creation Course",
             "orderID": "CC-002",
             "price": "$149",
-            "sales": 120
+            "sales": 120,
+            "category": "Content Creation"
         },
         {
-            "name": "Social Media Advertising Toolkit",
-            "orderID": "SMAT-003",
+            "name": "Video Editing Tools for Creators",
+            "orderID": "VET-007",
+            "price": "$199",
+            "sales": 85,
+            "category": "Content Creation"
+        },
+        {
+            "name": "SEO Optimization Service",
+            "orderID": "SEO-004",
+            "price": "$199",
+            "sales": 60,
+            "category": "SEO Services"
+        },
+        {
+            "name": "Advanced SEO Toolkit",
+            "orderID": "AST-008",
             "price": "$299",
-            "sales": 75
+            "sales": 80,
+            "category": "SEO Services"
         }
     ]
 }
